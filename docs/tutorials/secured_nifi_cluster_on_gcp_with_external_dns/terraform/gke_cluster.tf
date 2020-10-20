@@ -58,7 +58,7 @@ resource "google_container_cluster" "nifi-cluster" {
   monitoring_service = "monitoring.googleapis.com/kubernetes"
 
   # The minimum version of the master
-  min_master_version = "1.16.9-gke.6"
+  min_master_version = "1.16"
 
   # The name or self_link of the Google Compute Engine network to which the cluster is connected. For Shared VPC, set this to the self link of the shared network
   network = "projects/${var.project}/global/networks/default"

@@ -182,6 +182,8 @@ type NodeState struct {
 	ConfigurationState ConfigurationState `json:"configurationState"`
 	// InitClusterNode contains if this nodes was part of the initial cluster
 	InitClusterNode InitClusterNode `json:"initClusterNode"`
+	// Generated UUID contains the uuid of the node if it is an init one.
+	GeneratedUUID string `json:"generatedUUID,omitempty"`
 }
 
 // RackAwarenessState holds info about rack awareness status

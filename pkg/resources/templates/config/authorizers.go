@@ -15,31 +15,29 @@
 package config
 
 // Template for nifi's authorizer.xml file, used by the initial cluster's nodes
-var AuthorizersTemplate = `{{- $nodeList := .NodeList }}
-{{- $clusterName := .ClusterName }}
+var AuthorizersTemplate = `{{- $clusterName := .ClusterName }}
 {{- $namespace := .Namespace }}<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <authorizers>
     <userGroupProvider>
-        <identifier>file-user-group-provider</identifier>
+        <identifier>file-user-group-provider-controller</identifier>
         <class>org.apache.nifi.authorization.FileUserGroupProvider</class>
-        <property name="Users File">../data/users.xml</property>
-        <property name="Legacy Authorized Users File"></property>
+        <property name="Users File">../data/{{ .UserControllerFile }}</property>
         <property name="Initial User Identity admin">{{ .InitialAdminUser }}</property>
-{{- range $i, $host := .NodeList }}
+{{- range $i, $host := .NodesHost }}
         <property name="Initial User Identity {{ $i }}">{{ $host }}</property>
 {{- end }}
+        <property name="Legacy Authorized Users File"></property>
     </userGroupProvider>
     <accessPolicyProvider>
         <identifier>file-access-policy-provider</identifier>
         <class>org.apache.nifi.authorization.FileAccessPolicyProvider</class>
-        <property name="User Group Provider">file-user-group-provider</property>
-        <property name="Authorizations File">../data/authorizations.xml</property>
+        <property name="User Group Provider">file-user-group-provider-controller</property>
+        <property name="Authorizations File">../data/{{ .AuthorizationsFile }}</property>
         <property name="Initial Admin Identity">{{ .InitialAdminUser }}</property>
         <property name="Legacy Authorized Users File"></property>
-{{- range $i, $host := .NodeList }}
+{{- range $i, $host := .NodesHost }}
         <property name="Node Identity {{ $i }}">{{ $host }}</property>
 {{- end }}
-		<property name="Node Group"></property>
     </accessPolicyProvider>
     <authorizer>
         <identifier>managed-authorizer</identifier>
@@ -48,21 +46,22 @@ var AuthorizersTemplate = `{{- $nodeList := .NodeList }}
     </authorizer>
 </authorizers>
 `
+
+// 		<property name="Node Group">{{ .NodesGroupName }}</property>
 
 // Empty authorizer.xml template, used by new node joining the cluster
 var EmptyAuthorizersTemplate = `<authorizers>
-    <userGroupProvider>
-        <identifier>file-user-group-provider</identifier>
+	<userGroupProvider>
+        <identifier>file-user-group-provider-controller</identifier>
         <class>org.apache.nifi.authorization.FileUserGroupProvider</class>
-        <property name="Users File">../data/users.xml</property>
+        <property name="Users File">../data/{{ .UserControllerFile }}</property>
         <property name="Legacy Authorized Users File"></property>
     </userGroupProvider>
-
     <accessPolicyProvider>
         <identifier>file-access-policy-provider</identifier>
         <class>org.apache.nifi.authorization.FileAccessPolicyProvider</class>
-        <property name="User Group Provider">file-user-group-provider</property>
-        <property name="Authorizations File">../data/authorizations.xml</property>
+        <property name="User Group Provider">file-user-group-provider-controller</property>
+        <property name="Authorizations File">../data/{{ .AuthorizationsFile }}</property>
     </accessPolicyProvider>
     <authorizer>
         <identifier>managed-authorizer</identifier>
@@ -71,6 +70,13 @@ var EmptyAuthorizersTemplate = `<authorizers>
     </authorizer>
 </authorizers>
 `
+
+// 	<userGroupProvider>
+//        <identifier>composite-user-group-provider</identifier>
+//        <class>org.apache.nifi.authorization.CompositeConfigurableUserGroupProvider</class>
+//        <property name="Configurable User Group Provider">file-user-group-provider-controller</property>
+//        <property name="User Group Provider 1">file-user-group-provider</property>
+//    </userGroupProvider>
 
 /*
 {{- $nodeList := .NodeList }}

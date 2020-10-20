@@ -20,7 +20,6 @@ import (
 	"time"
 
 	"emperror.dev/errors"
-	"github.com/go-logr/logr"
 	v1alpha1 "github.com/Orange-OpenSource/nifikop/pkg/apis/nifi/v1alpha1"
 	common "github.com/Orange-OpenSource/nifikop/pkg/controller/common"
 	"github.com/Orange-OpenSource/nifikop/pkg/errorfactory"
@@ -29,6 +28,8 @@ import (
 	"github.com/Orange-OpenSource/nifikop/pkg/resources"
 	"github.com/Orange-OpenSource/nifikop/pkg/resources/nifi"
 	"github.com/Orange-OpenSource/nifikop/pkg/util"
+	"github.com/go-logr/logr"
+	"github.com/google/uuid"
 	corev1 "k8s.io/api/core/v1"
 	apiErrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -145,15 +146,20 @@ func (r *ReconcileNifiCluster) Reconcile(request reconcile.Request) (reconcile.R
 		return r.checkFinalizers(ctx, reqLogger, instance)
 	}
 
-	//
+	// Prepare init nodes configuration
 	if len(instance.Status.State) == 0 || instance.Status.State == v1alpha1.NifiClusterInitializing {
 		if err := k8sutil.UpdateCRStatus(r.client, instance, v1alpha1.NifiClusterInitializing, reqLogger); err != nil {
 			return common.RequeueWithError(log, err.Error(), err)
 		}
 		for nId := range instance.Spec.Nodes {
-			if err := k8sutil.UpdateNodeStatus(r.client, []string{fmt.Sprint(instance.Spec.Nodes[nId].Id)}, instance, v1alpha1.IsInitClusterNode, log); err != nil {
+			nodeId := fmt.Sprint(instance.Spec.Nodes[nId].Id)
+			if err := k8sutil.UpdateNodeStatus(r.client, []string{nodeId}, instance, v1alpha1.IsInitClusterNode, log); err != nil {
 				return common.RequeueWithError(log, err.Error(), err)
 			}
+			uuID := uuid.Must(uuid.NewRandom())
+			nodeState := instance.Status.NodesState[nodeId]
+			nodeState.GeneratedUUID = uuID.String()
+			instance.Status.NodesState[nodeId] = nodeState
 		}
 		if err := k8sutil.UpdateCRStatus(r.client, instance, v1alpha1.NifiClusterInitialized, reqLogger); err != nil {
 			return common.RequeueWithError(log, err.Error(), err)

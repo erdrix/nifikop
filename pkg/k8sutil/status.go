@@ -17,9 +17,10 @@ package k8sutil
 import (
 	"context"
 	"fmt"
-	"github.com/Orange-OpenSource/nifikop/pkg/apis/nifi/v1alpha1"
 	"strings"
 	"time"
+
+	"github.com/Orange-OpenSource/nifikop/pkg/apis/nifi/v1alpha1"
 
 	"emperror.dev/errors"
 	"github.com/go-logr/logr"

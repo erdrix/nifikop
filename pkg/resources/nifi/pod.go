@@ -19,13 +19,13 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/go-logr/logr"
 	"github.com/Orange-OpenSource/nifikop/pkg/apis/nifi/v1alpha1"
 	"github.com/Orange-OpenSource/nifikop/pkg/resources/templates"
 	"github.com/Orange-OpenSource/nifikop/pkg/util"
 	nifiutil "github.com/Orange-OpenSource/nifikop/pkg/util/nifi"
 	pkicommon "github.com/Orange-OpenSource/nifikop/pkg/util/pki"
 	zk "github.com/Orange-OpenSource/nifikop/pkg/util/zookeeper"
+	"github.com/go-logr/logr"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -165,6 +165,8 @@ rm -f $NIFI_BASE_DIR/cluster.state `,
 		r.NifiCluster.Spec.ListenersConfig.InternalListeners)
 
 	command := []string{"bash", "-ce", fmt.Sprintf(`cp ${NIFI_HOME}/tmp/* ${NIFI_HOME}/conf/
+if [[ ! -f $NIFI_BASE_DIR/data/%s ]]; then cp ${NIFI_HOME}/tmp/%s $NIFI_BASE_DIR/data; fi && rm -f ${NIFI_HOME}/conf/%s
+if [[ ! -f $NIFI_BASE_DIR/data/%s ]]; then cp ${NIFI_HOME}/tmp/%s $NIFI_BASE_DIR/data; fi && rm -f ${NIFI_HOME}/conf/%s
 echo "Waiting for host to be reachable"
 notMatchedIp=true
 while $notMatchedIp
@@ -182,7 +184,10 @@ do
 done
 echo "Hostname is successfully binded withy IP adress"
 %s
-exec bin/nifi.sh run`, nodeAddress, nodeAddress, removesFileAction)}
+exec bin/nifi.sh run`,
+UserControllerFile, UserControllerFile, UserControllerFile,
+AuthorizationsFile, AuthorizationsFile, AuthorizationsFile,
+nodeAddress, nodeAddress, removesFileAction)}
 
 	// curl -kv --cert /var/run/secrets/java.io/keystores/client/tls.crt --key /var/run/secrets/java.io/keystores/client/tls.key https://nifi.trycatchlearn.fr:8433/nifi
 	// curl -kv --cert /var/run/secrets/java.io/keystores/client/tls.crt --key /var/run/secrets/java.io/keystores/client/tls.key https://securenc-headless.external-dns-test.gcp.trycatchlearn.fr:8443/nifi-api/controller/cluster

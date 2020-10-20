@@ -21,15 +21,26 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/go-logr/logr"
-	"github.com/imdario/mergo"
 	"github.com/Orange-OpenSource/nifikop/pkg/apis/nifi/v1alpha1"
 	"github.com/Orange-OpenSource/nifikop/pkg/resources/templates"
 	"github.com/Orange-OpenSource/nifikop/pkg/resources/templates/config"
 	"github.com/Orange-OpenSource/nifikop/pkg/util"
 	utilpki "github.com/Orange-OpenSource/nifikop/pkg/util/pki"
+	"github.com/go-logr/logr"
+	"github.com/imdario/mergo"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
+)
+
+const (
+	AdminsGroupId = "2c2c6c76-0175-1000-ffff-ffff811b6f7b"
+	NodesGroupId = "2c2c865b-0175-1000-ffff-ffff9f2529ba"
+	ReadersGroupId = "2c2cda08-0175-1000-0000-00002880598d"
+	ControllerUserId = "2c2c4b62-0175-1000-ffff-ffffe3135181"
+	InitialAdminUserId = "0949dc02-5255-3a33-8b8a-e72166d879bf"
+	UserControllerFile = "user-controller.xml"
+	AuthorizationsFile = "authorizations.xml"
+	NodesGroupName = "nodes"
 )
 
 func (r *Reconciler) configMap(id int32, nodeConfig *v1alpha1.NodeConfig, serverPass, clientPass string, superUsers []string, log logr.Logger) runtime.Object {
@@ -54,7 +65,9 @@ func (r *Reconciler) configMap(id int32, nodeConfig *v1alpha1.NodeConfig, server
 	}
 
 	if r.NifiCluster.Spec.ListenersConfig.SSLSecrets != nil && r.NifiCluster.Spec.ClusterSecure && r.NifiCluster.Spec.SiteToSiteSecure {
-		configMap.Data["authorizers.xml"] = r.getAuthorizersConfigString(nodeConfig, id, log)
+		configMap.Data["authorizers.xml"]  = r.getAuthorizersConfigString(nodeConfig, id, log)
+		configMap.Data[UserControllerFile] = r.getUsersGroupsConfig(log)
+		configMap.Data[AuthorizationsFile] = r.getAuthorizationsConfig(log)
 	}
 	return configMap
 }
@@ -62,6 +75,58 @@ func (r *Reconciler) configMap(id int32, nodeConfig *v1alpha1.NodeConfig, server
 ////////////////////////////////////
 //  Nifi properties configuration //
 ////////////////////////////////////
+
+func (r *Reconciler) getUsersGroupsConfig(log logr.Logger) string {
+
+	nodesHost := make(map[string]string)
+	for nId, nodeState := range r.NifiCluster.Status.NodesState {
+		if nodeState.InitClusterNode {
+			nodesHost[nodeState.GeneratedUUID] = utilpki.GetNodeUserName(r.NifiCluster, util.ConvertStringToInt32(nId))
+		}
+	}
+
+	var out bytes.Buffer
+	t := template.Must(template.New("nConfig-config").Parse(config.UsersGroupsTemplate))
+	if err := t.Execute(&out, map[string]interface{}{
+		"AdminsGroupId" : AdminsGroupId,
+		"NodesGroupId": NodesGroupId,
+		"ReadersGroupId": ReadersGroupId,
+		"ControllerUserId": ControllerUserId,
+		"ControllerUser": utilpki.ControllerUserName(r.NifiCluster),
+		"NodesGroupName": NodesGroupName,
+		"InitialAdminUserId": InitialAdminUserId,
+		"InitialAdminUser": r.NifiCluster.Spec.InitialAdminUser,
+		"NodesHost": nodesHost,
+	}); err != nil {
+		log.Error(err, "error occurred during parsing the config template")
+	}
+	return out.String()
+}
+
+func (r *Reconciler) getAuthorizationsConfig(log logr.Logger) string {
+	nodesHost := make(map[string]string)
+	for nId, nodeState := range r.NifiCluster.Status.NodesState {
+		if nodeState.InitClusterNode {
+			nodesHost[nodeState.GeneratedUUID] = utilpki.GetNodeUserName(r.NifiCluster, util.ConvertStringToInt32(nId))
+		}
+	}
+
+	var out bytes.Buffer
+	t := template.Must(template.New("nConfig-config").Parse(config.AuthorizationsTemplate))
+	if err := t.Execute(&out, map[string]interface{}{
+		"AdminsGroupId" : AdminsGroupId,
+		"NodesGroupId": NodesGroupId,
+		"ReadersGroupId": ReadersGroupId,
+		"NodesHost": nodesHost,
+		"InitialAdminUserId": InitialAdminUserId,
+		//"ControllerUserId": ControllerUserId,
+		//"ControllerUser": utilpki.ControllerUserName(r.NifiCluster),
+		//"NodesGroupName": NodesGroupName,
+	}); err != nil {
+		log.Error(err, "error occurred during parsing the config template")
+	}
+	return out.String()
+}
 
 //
 func (r Reconciler) generateNifiPropertiesNodeConfig(id int32, nodeConfig *v1alpha1.NodeConfig, serverPass, clientPass string, superUsers []string, log logr.Logger) string {
@@ -315,14 +380,14 @@ func (r *Reconciler) getBootstrapNotificationServicesConfigString(nConfig *v1alp
 // TODO: Check if cases where is it necessary before using it (seems to be used for secured use cases)
 func (r *Reconciler) getAuthorizersConfigString(nConfig *v1alpha1.NodeConfig, id int32, log logr.Logger) string {
 
-	nodeList := make(map[string]string)
+	nodesHost := make(map[string]string)
 
 	authorizersTemplate := config.EmptyAuthorizersTemplate
 	if r.NifiCluster.Status.NodesState[fmt.Sprint(id)].InitClusterNode {
 		authorizersTemplate = config.AuthorizersTemplate
 		for nId, nodeState := range r.NifiCluster.Status.NodesState {
 			if nodeState.InitClusterNode {
-				nodeList[nId] = utilpki.GetNodeUserName(r.NifiCluster, util.ConvertStringToInt32(nId))
+				nodesHost[nId] = utilpki.GetNodeUserName(r.NifiCluster, util.ConvertStringToInt32(nId))
 			}
 		}
 	}
@@ -335,8 +400,11 @@ func (r *Reconciler) getAuthorizersConfigString(nConfig *v1alpha1.NodeConfig, id
 		"Id":               id,
 		"ClusterName":      r.NifiCluster.Name,
 		"Namespace":        r.NifiCluster.Namespace,
-		"NodeList":         nodeList,
+		"NodesHost":         nodesHost,
 		"InitialAdminUser": r.NifiCluster.Spec.InitialAdminUser,
+		"UserControllerFile": UserControllerFile,
+		"AuthorizationsFile": AuthorizationsFile,
+		"NodesGroupName": NodesGroupName,
 	}); err != nil {
 		log.Error(err, "error occurred during parsing the config template")
 	}
