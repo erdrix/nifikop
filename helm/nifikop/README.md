@@ -29,6 +29,7 @@ The following tables lists the configurable parameters of the NiFi Operator Helm
 | `image.imagePullSecrets.name`    | Name of the secret to connect to docker registry | -                                         |
 | `certManager.enabled`            | Enable cert-manager integration                  | `true`                                    |
 | `rbacEnable`                     | If true, create & use RBAC resources             | `true`                                    |
+| `serviceAccount.create`          | If true, create service account                  | `true`                                    |
 | `resources`                      | Pod resource requests & limits                   | `{}`                                      |
 | `metricService`                  | deploy service for metrics                       | `false`                                   |
 | `debug.enabled`                  | activate DEBUG log level                         | `false`                                   |
