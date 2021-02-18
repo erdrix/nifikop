@@ -1,0 +1,1080 @@
+apiVersion: v1
+entries:
+  cassandra-operator:
+  - apiVersion: v1
+    appVersion: 1.1.2-release
+    created: "2021-02-05T17:13:35.019446363Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 5ce0e77773b03100dd462e58b21d17f6a9a5995c1989eadef8566536d768ba95
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v1
+    appVersion: 1.0.2-release
+    created: "2020-12-15T17:26:27.651222643Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: a3727d28975274e8906ca8e5138b5e962f63b61a67d2710cfbf96e4db5207c9f
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    appVersion: 1.0.1-release
+    created: "2020-11-18T17:42:38.548602355Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: d166f577e4fc55b65c4359584b30225096d5bc8960eecff13df83cedade3ec3b
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: 1.0.0-release
+    created: "2020-10-14T14:07:44.345093033Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 49c02ecc9ddc42cf3c09baf13465aae3b52752daa69f1b5a382807673f9b503c
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: 0.5.6-release
+    created: "2020-09-15T07:43:14.552228046Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 1fe9b7d236cb9129a118c4abab17554042a0fd224c20a7d8b9a19bce9018f409
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.6.tgz
+    version: 0.5.6
+  - apiVersion: v1
+    appVersion: 0.5.5-release
+    created: "2020-09-09T12:54:50.894185943Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 275766876e0b62de606f20dadf9f7c5d686ecd8cdb28278e8f4edd90615e4380
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.5.tgz
+    version: 0.5.5
+  - apiVersion: v1
+    appVersion: 0.5.4-release
+    created: "2020-08-28T11:40:11.814526617Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: d088b5b1daa118cfa66e6cf50133c1ed6954202c568001e53677ba8a4be7cd6c
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v1
+    appVersion: 0.5.3-release
+    created: "2020-08-19T08:03:27.743941225Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 68db0dcece821ddd2aa01f3fd179a9378842449f168ccac3c0d99027e59e330b
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v1
+    appVersion: 0.5.2-release
+    created: "2020-03-09T08:12:43.980454796Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 630ea5427e686139b48d25b82e8a00cbf7a5994a2267c4cf528bcd7a4ae56751
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v1
+    appVersion: 0.5.1-release
+    created: "2020-02-14T04:16:09.16000339Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 572581331a88aaac878811e744c4e262aac07b61ff0de798042dcafca505495a
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v1
+    appVersion: 0.5.0-release
+    created: "2020-01-06T12:26:23.291753539Z"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: c2c1359ad3314722cfeab931f3bb6ad508b31b650c10c34fb2a6c9bf5880e618
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v1
+    appVersion: 0.4.1-release
+    created: "2019-12-26T11:45:37.851402+01:00"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 97e81b96370276e85d5cc4a87a49ebcf8a94d3dc36220047d7e8794fedd7ed1c
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v1
+    appVersion: 0.4.0-release
+    created: "2019-12-26T11:45:37.850757+01:00"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 8ee47e7fb1328b77af3102686f546f8807f973a0fc5f22929b7915a5a5ca5d12
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v1
+    appVersion: 0.3.2-release
+    created: "2019-12-26T11:45:37.850135+01:00"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: 3adb84740d75ab1bc9f674e03553cf43aa1dac7661817b6622beee58c1e08aa1
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v1
+    appVersion: 0.3.1-mater
+    created: "2019-12-26T11:45:37.849472+01:00"
+    description: A Helm chart for CassKop - the Orange Cassandra Kubernetes operator
+    digest: d4eb5ebe3de38e2d75184f3734e3f88ef9e82ebb88bc4beb44544f7b5b69702f
+    home: https://github.com/Orange-OpenSource/casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    name: cassandra-operator
+    sources:
+    - https://github.com/Orange-OpenSource/casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/cassandra-operator-0.3.1.tgz
+    version: 0.3.1
+  multi-casskop:
+  - apiVersion: v1
+    appVersion: 1.1.2-release
+    created: "2021-02-05T17:15:48.648722946Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 0e5f75ca5c7eb41021f05a5d74a7e0361cd0f6b144cb43d5c985894feeb4b067
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v1
+    appVersion: 1.0.2-release
+    created: "2020-12-15T17:28:41.213215063Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 3a42abfa74a15fbf97545f50c1e6316a88ab28984206a0a96bf32ac01525d1d3
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    appVersion: 1.0.1-release
+    created: "2020-11-18T17:45:34.25728036Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: d3f20dfbe4c9f044f8cd7c927d55cd8cc46af69830125bd24ace64be98cee688
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon@gmail.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    - email: richardperes.info@gmail.com
+      name: PERES-Richard
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: 1.0.0-release
+    created: "2020-10-14T14:09:53.94294572Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 06bf239c75b2d8d4bba414b81ebece2a2bb2591911aaa1bb238e4c157239aae7
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: 0.5.6-release
+    created: "2020-09-15T07:47:59.742795666Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 983428b7b87449362149fd4c50dcafda0c6042d311082ecf104c4b577a69f5b7
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.6.tgz
+    version: 0.5.6
+  - apiVersion: v1
+    appVersion: 0.5.5-release
+    created: "2020-09-09T13:05:29.322157659Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 62ca5351503876fe6504d5788876d00f98aad7e854cf742ec7c4ab73b2abf9c4
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.5.tgz
+    version: 0.5.5
+  - apiVersion: v1
+    appVersion: 0.5.4-release
+    created: "2020-08-28T11:39:52.800075788Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 8f0aa45124bee978ac406e715bae421ad5b460236614216b74392d011ecd7f91
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.4.tgz
+    version: 0.5.4
+  - apiVersion: v1
+    appVersion: 0.5.3-release
+    created: "2020-06-18T08:55:01.69203509Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: e1856d14a5324f7f519b03cb3948f3326f760253ebc28f6794e703734aea4d6b
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v1
+    appVersion: 0.5.2-release
+    created: "2020-03-09T08:13:00.562686942Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: 9b0761d24a634635f998bafe58dc5094c6dd11cebdf2742e2f48d2233ef61410
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v1
+    appVersion: 0.5.1-release
+    created: "2020-02-14T04:18:31.845697205Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: b80ce37646bf9f9f78d4123028c89a56a8fd667e9bff32da5081ac103ab923e7
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: cscetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v1
+    appVersion: 0.5.0-release
+    created: "2020-01-06T12:26:44.491149534Z"
+    description: A Helm chart for MultiCassKop - the Orange Multiple Cassandra Kubernetes
+      operator
+    digest: cfce2560977476fe610c6a386ab5685a718edd907adafc294dfd91250038748a
+    home: https://github.com/Orange-OpenSource/casskop/multi-casskop
+    keywords:
+    - operator
+    - cassandra
+    - casskop
+    - multi-casskop
+    - multi-clusters
+    maintainers:
+    - email: sebastien.allamand@orange.com
+      name: allamand
+    - email: cscetbon.ext@orange.com
+      name: Orange-csetbon
+    - email: jeanarmel.luce@orange.com
+      name: jal06
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: multi-casskop
+    sources:
+    - https://github.com/Orange-OpenSource/casskop/multi-casskop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/multi-casskop-0.5.0.tgz
+    version: 0.5.0
+  nifikop:
+  - apiVersion: v1
+    appVersion: 0.5.2-release
+    created: "2021-02-09T10:33:11.450601+01:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 0c74c114a2f48a609ab60ea61632041b8572f1fe4fba22b9bb62fe02f7ef7576
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.5.2.tgz
+    version: 0.5.2
+  - apiVersion: v1
+    appVersion: 0.5.2-release
+    created: "2021-02-09T10:41:41.260953+01:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 92c842415e343ad6f05de96fee1a60cd750fe9d43a98bafaec4bec8dc95d4814
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.5.2-debug.tgz
+    version: 0.5.2-debug
+  - apiVersion: v1
+    appVersion: 0.5.1-release
+    created: "2021-01-26T09:14:08.678004644Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: b4946494defc81c685fbcdd6ad262320dec4af8c060465759a8067898e2d7076
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.5.1.tgz
+    version: 0.5.1
+  - apiVersion: v1
+    appVersion: 0.5.0-release
+    created: "2021-01-19T08:23:43.892681573Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 45766d604a2281e72bb0cd6b14ac3bda3d83998db823417e9ed0a59dd2787833
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v1
+    appVersion: 0.4.3-release
+    created: "2021-01-06T09:53:46.123154818Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: fab9c7dc529ea6cfe4676557a28fdda0a8c77332a347fe7a5ecce8fb3aa2730a
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.4.3.tgz
+    version: 0.4.3
+  - apiVersion: v1
+    appVersion: 0.4.2-alpha-release
+    created: "2021-01-04T14:16:31.2874+01:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: c6a047bf92d788041615f8a0b9360986ccba2a1561d1bbf7b36dbe71faac1f41
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.4.2-alpha-ft-upgrade-operator-sdk.tgz
+    version: 0.4.2-alpha-ft-upgrade-operator-sdk
+  - apiVersion: v1
+    appVersion: 0.4.2-alpha-release
+    created: "2021-01-04T14:26:13.501435+01:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 56484d75d9dffb77d487496c22469b768aee68f0bb94ccc1629e075653a9d281
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.4.2-alpha.tgz
+    version: 0.4.2-alpha
+  - apiVersion: v1
+    appVersion: 0.4.1-alpha-release
+    created: "2020-11-16T09:22:58.67949536Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 192008c7ac0a8bdc30d5221b8b1131413be03a3293d884887318e2ec2f736b8b
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.4.1-alpha.tgz
+    version: 0.4.1-alpha
+  - apiVersion: v1
+    appVersion: 0.3.1-release
+    created: "2020-10-20T16:09:54.34960934Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: a5cc6b65f1d4276aaf61a6c97c0b57fce9efae3d1118dc71898a33bb2144982b
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v1
+    appVersion: 0.3.0-release
+    created: "2020-09-16T07:50:02.437814094Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 9b60ec9a6b41415969f175756884443507c06f0cc31ea2890b6b1f95500f5cde
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v1
+    appVersion: 0.2.1-release
+    created: "2020-08-20T14:49:42.415816163Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: af3094181105d60e44dd19c12f0ef41cc81da6ba7e6d56e145cc08035b2aee51
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v1
+    appVersion: 0.2.0-release
+    created: "2020-07-17T13:49:32.011611572+02:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 383ae0a388a32f22ae49e293864db6c3cbd960859367dfaa62c736f315db7115
+    home: https://github.com/Orange-OpenSource/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/Orange-OpenSource/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: 0.1.0-release
+    created: "2020-06-18T17:43:42.23895244+02:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: ae3cb39dae1ac027bc4a84f252aa898a5b1e65510aabfb3f9b1083ca8c583784
+    home: https://gitlab.si.francetelecom.fr/kubernetes/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://gitlab.si.francetelecom.fr/kubernetes/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v1
+    appVersion: 0.0.1-release
+    created: "2020-05-07T07:42:51.192182764Z"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: f55836147e450f6781b643cbbf9ff94e7a440787c7d7984b2fb255a3e7414a49
+    home: https://github.com/erdrix/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/erdrix/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.0.1.tgz
+    version: 0.0.1
+  - apiVersion: v1
+    appVersion: 0.0.1-release
+    created: "2020-05-07T09:42:26.051036663+02:00"
+    description: A Helm chart for NiFiKop - the Orange NiFi Kubernetes operator
+    digest: 1c105b1de65d062702555637ef369d6edc8dea4cee8ca91335fea0dbbb4a19f2
+    home: https://github.com/erdrix/nifikop
+    keywords:
+    - operator
+    - nifi
+    - nifikop
+    - data
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    - email: franck.dehay@orange.com
+      name: fdehay
+    name: nifikop
+    sources:
+    - https://github.com/erdrix/nifikop
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/nifikop-0.0.1-feature-http-client.tgz
+    version: 0.0.1-feature-http-client
+  tracker:
+  - apiVersion: v1
+    appVersion: 0.0.1-release
+    created: "2020-07-22T10:10:49.603396724+02:00"
+    description: A Helm chart for Tracker - the Orange tracking solution
+    digest: ad9701ff32fd8f6984c58a69232c78f6f9ce96ae3c702c62015fc114931f2104
+    home: https://github.com/erdrix/tracker
+    keywords:
+    - data
+    - tracker
+    maintainers:
+    - email: aguitton.ext@orange.com
+      name: erdrix
+    name: tracker
+    sources:
+    - https://github.com/erdrix/tracker
+    urls:
+    - https://orange-kubernetes-charts-incubator.storage.googleapis.com/tracker-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-02-09T10:41:41.25885+01:00"

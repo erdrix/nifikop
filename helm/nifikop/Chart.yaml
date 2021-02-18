@@ -4,7 +4,7 @@ name: nifikop
 home: https://github.com/Orange-OpenSource/nifikop
 sources:
   - https://github.com/Orange-OpenSource/nifikop
-version: 0.5.2
+version: 0.5.2-debug
 appVersion: 0.5.2-release
 icon:
 maintainers:

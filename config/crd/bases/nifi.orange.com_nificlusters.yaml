@@ -1307,6 +1307,7 @@ spec:
                           - http
                           - https
                           - s2s
+                          - prometheus
                           type: string
                       required:
                       - containerPort

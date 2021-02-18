@@ -28,8 +28,12 @@ spec:
       imagePullSecrets:
         - name: {{ .Values.image.imagePullSecrets.name }}
       {{- end }}
-      {{- if .Values.rbacEnable }}
+      {{- if or .Values.rbacEnable .Values.serviceAccount.name}}
+      {{- if .Values.serviceAccount.name }}
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      {{- else }}
       serviceAccountName: {{ template "nifikop.name" . }}
+      {{- end }}
       {{- end }}
       {{- if .Values.vaultSecret }}
       volumes:
