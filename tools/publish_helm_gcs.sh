@@ -22,7 +22,7 @@ set -o pipefail
 HELM_TARGET_DIR=$(pwd)/tmp/incubator
 readonly HELM_URL=https://get.helm.sh
 readonly HELM_TARBALL=helm-v3.4.2-linux-amd64.tar.gz
-#readonly HELM_TARBALL=helm-v2.9.1-darwin-amd64.tar.gz
+#readonly HELM_TARBALL=helm-v3.4.2-darwin-amd64.tar.gz
 #readonly STABLE_REPO_URL=https://orange-kubernetes-charts.storage.googleapis.com/
 readonly INCUBATOR_REPO_URL=https://orange-kubernetes-charts-incubator.storage.googleapis.com/
 #readonly GCS_BUCKET_STABLE=gs://orange-kubernetes-charts
